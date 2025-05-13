@@ -1,4 +1,18 @@
-:root {
+/* :root {
     --bs-body-font-family: 'Roboto';
+} */
+
+
+
+.background {
+    position: absolute;
+
+    height: 100vh; /* 100 * vh = total viewport height. Helps to re-size background img to fit into view port properly*/
+    width: 100vw;
 }
 
+
+.nav-link:hover  {
+
+    color:lightgrey !important; /* important overrides the bootstrap properties, since text-white is applied to nav items for its classes */
+}
