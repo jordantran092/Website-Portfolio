@@ -8,13 +8,13 @@
     position: absolute;
 
     height: 100vh; /* 100 * vh = total viewport height. Helps to re-size background img to fit into view port properly*/
-    width: 100vw;
+    width: 100vw; 
 }
 
 
 .nav-link:hover  {
 
-    color:lightgrey !important; /* important overrides the bootstrap properties, since text-white is applied to nav items for its classes */
+    color:rgb(215, 215, 215) !important; /* important overrides the bootstrap properties, since text-white is applied to nav items for its classes */
 }
 
 /* 
