@@ -28,7 +28,10 @@
         <nav class="navbar navbar-expand-lg fw-bold fs-6">
             <!-- Contaienr fluid for navbar to take full width -->
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">TEMP</a>
+                <a class="navbar-brand" href="#">
+                    <!-- <img src="/media/mylogo.png" width="30" height="30" alt=""> -->
+
+                </a>
                 
                 <!-- 
                     nav bar toggler when window is at a smaller width e.g. mobile device, to expand/collapse navbar items
@@ -39,7 +42,7 @@
                  
                 -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent">
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -54,7 +57,7 @@
 
                 
                         <li class="nav-item me-4">
-                            <a class="nav-link text-white" href="#">HOME</a>
+                            <a class="nav-link active text-white border px-4" aria-current="page" href="#">HOME</a>
                         </li>
                         <li class="nav-item me-4">
                             <a class="nav-link text-white" href="#">MY WORK</a>

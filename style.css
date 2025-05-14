@@ -16,3 +16,8 @@
 
     color:lightgrey !important; /* important overrides the bootstrap properties, since text-white is applied to nav items for its classes */
 }
+
+/* 
+.active {
+    color:green !important;
+} */
