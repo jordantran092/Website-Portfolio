@@ -9,6 +9,11 @@
 
     height: 100vh; /* 100 * vh = total viewport height. Helps to re-size background img to fit into view port properly*/
     width: 100vw; 
+
+    object-fit: cover; /* fix aspect ratio */
+
+    
+
 }
 
 
