@@ -25,12 +25,19 @@
     <img class="background img-fluid" src="/media/bg.jpg" alt="">
 
     <header>
+
+        <!-- 
+            place heading in same header tag to help in overlapping the navbar 
+
+            for mobile, margin top is size 3 and margin-start is 3, for medium size md the size increases
+        -->
+        <h1 class="display-6 mt-3 mt-md-4 ms-3 ms-md-5" id="myName">Jordan Tran</h1>
+
         <nav class="navbar navbar-expand-lg fw-bold fs-6">
             <!-- Contaienr fluid for navbar to take full width -->
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <!-- <img src="/media/mylogo.png" width="30" height="30" alt=""> -->
-                    <div class="h">Jordan Tran</div>
                 </a>
                 
                 <!-- 
@@ -55,7 +62,7 @@
                         <!-- Giving it class nav-item gives this item the properties to become a navbar item -->
 
                 
-                        <li class="nav-item ms-5">
+                        <li class="nav-item">
                             <a class="nav-link active text-black border border-dark px-4" aria-current="page" href="#">HOME</a>
                         </li>
                         <li class="nav-item ms-4">
@@ -93,6 +100,8 @@
             </div>
         </nav>
     </header>
+
+    
 
     <main></main>
 

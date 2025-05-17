@@ -19,6 +19,11 @@
 
 }
 
+#myName {
+    position: absolute;
+    font-size: 3vw;
+}
+
 
 .nav-link:hover  {
 
