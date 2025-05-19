@@ -27,7 +27,7 @@
 
 .nav-link:hover  {
 
-    color:rgb(215, 215, 215) !important; /* important overrides the bootstrap properties, since text-white is applied to nav items for its classes */
+    color: grey !important; /* important overrides the bootstrap properties, since text-white is applied to nav items for its classes */
 }
 
 /* 
