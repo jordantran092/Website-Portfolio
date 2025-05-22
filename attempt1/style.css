@@ -6,7 +6,7 @@
 
 .background {
     /* position: absolute; */
-
+    position: relative;
 
     /* 100 * vh = total viewport height. Helps to re-size background img to fit into view port properly*/
     /* height: 100vh; */ 
@@ -20,12 +20,16 @@
 
 }
 
-
-
-.footer {
-    margin-top: 75vh;
-    height: 50vh; /* 50 */
+.navbar {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 30vw;
 }
+
+
+
 
 #myName {
     position: absolute;
@@ -46,12 +50,10 @@
         width: 8em;
     }
 
-
-    .footer {
-        margin-top: 15vh;
-        height: 90vh;
-        /* 80 */
+    .navbar {
+        left: 70vw;
     }
+
 }
 
 
