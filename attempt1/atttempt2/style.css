@@ -4,7 +4,7 @@
 
 
 
-header {
+.background {
     /* position: absolute; */
 
 
@@ -16,22 +16,19 @@ header {
      /* fix aspect ratio */
      /* object-fit: cover; */
 
-     
-
-
-
-
-
-     background-image: url("/media/bg-new.png");
-     height: 100vh;
-     min-height: 400px;
-     background-size: cover;
-
     
 
 }
 
+
+
+.footer {
+    margin-top: 85vh;
+    height: 40vh; /* 50 */
+}
+
 #myName {
+    position: absolute;
     font-size: 3vw;
 }
 
@@ -50,6 +47,12 @@ header {
     }
 
 
+    .footer {
+        /* 15 */
+        margin-top: 22vh;
+        height: 70vh;
+        /* 90 */
+    }
 }
 
 

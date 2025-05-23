@@ -1,52 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+ <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Navbar Over Background Image</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .hero {
-      height: 100vh;
-      background-image: url('/media/bg-new.png');
-      background-size: cover;
-      background-position: center;
-      position: relative;
-    
-    }
+<style>
+.container {
+  position: relative;
+}
 
-    .navbar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 10; /* Make sure it's above the image */
-    }
+.black-box {
+  position: relative;
+  z-index: 1;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
 
-    /* .content {
-      position: relative;
-      z-index: 1;
-      color: white;
-      text-align: center;
-      padding-top: 200px;
-    } */
-  </style>
+.gray-box {
+  /* position: absolute; */
+  z-index: 2;
+  background: lightgray;
+  height: 60px;
+  width: 70%;
+  /* left: 50px;
+  top: 50px; */
+}
+
+.green-box {
+  /* position: absolute; */
+  z-index: 2;
+  background: lightgreen;
+  width: 35%;
+  /* left: 270px;
+  top: -15px; */
+  height: 100px;
+}
+</style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">My Site</a>
-    </div>
-  </nav>
 
-  <!-- Hero Section with Background Image -->
-  <div class="hero">
-    <!-- <div class="content">
-      <h1>Welcome</h1>
-      <p>This is a hero section with the navbar on top.</p>
-    </div> -->
-  </div>
+<div class="container">
+  <!-- <div class="black-box">Black box</div> -->
+  <div class="gray-box">Gray box</div>
+  <div class="green-box">Green box</div>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+</html> 
