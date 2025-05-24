@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Website</title>
     <link rel="stylesheet" href="css/bootstrap.css">
 
 
@@ -20,7 +20,8 @@
 
 </head>
 
-<body>
+<!-- Make body the flexbox container so that the footer can fill space all the way to bottom. Direction is set to column and vh is set to 100 so to that flexbox container stretches to bottom of viewport allowing footer to TRULY fill all the way to bottom -->
+<body class="d-flex flex-column vh-100">
 
     <!-- 
         Make position absolute to be placed on top of background img 
@@ -39,7 +40,7 @@
         Fixed-top to allow navbar to be on top of background image and fixed to the top of screen even when scroll down
     -->
     <nav class="navbar navbar-expand-lg fw-bold fs-6 fixed-top">
-        <!-- Containerr fluid for navbar to take full width -->
+        <!-- Container fluid for navbar to take full width -->
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <!-- <img src="/media/mylogo.png" width="30" height="30" alt=""> -->
@@ -98,14 +99,23 @@
     </nav>
 
 
-    <footer class="footer py-3 bg-dark">
-      <div class="container">
-        <span class="text-white">
-            Copyrights
-            <a href="https://mdbootstrap.com">MDBootstrap.com</a>
-        </span>
-      </div>
-    </footer>
+    <!-- Footer container -->
+    <!-- Footer is a flex item and enable grow to fill space all the way to bottom of its flex container/viewport -->
+    <div class="container-fluid pt-5 bg-dark text-center text-white flex-grow-1">
+        <div class="row">
+            <div class="col">
+                <h1 class="mt-5">Get In Touch</h1>
+                
+                <p class="mt-4">If you have any questions or concerns, feel free to contact me</p>
+                
+                <button type="button" class="btn btn-outline-light mt-5">CONTACT</button>
+
+
+                <p class="mt-5">© 2025 Jordan Tran</p>
+                
+            </div>
+        </div>
+    </div>
 
     
 
