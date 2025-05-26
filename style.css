@@ -1,6 +1,3 @@
-/* :root {
-    --bs-body-font-family: 'Roboto';
-} */
 
 
 
@@ -70,6 +67,12 @@ header {
     color:green !important;
 } */
 
+
+
+.scrolled {
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
 
 
 .mt-6 {
