@@ -28,8 +28,13 @@ header {
 
 }
 
-#myName {
-    font-size: 3vw;
+
+/* OLD: style="font-size: 4vw;" */
+/* For medium screens or less, font size is smaller, else defaults to initially set font size */
+@media (max-width: 768px) { 
+    #myName {
+        font-size: 1.1rem;
+    }
 }
 
 
@@ -40,7 +45,7 @@ header {
 
 
 
-/* At the value of max-width or less, the width of each nav item will be 8em */
+/* For large screens or more, the width of each nav item will be 8em */
 @media (max-width: 1199.98px) { 
     .nav-link {
         width: 8em;
@@ -58,6 +63,12 @@ header {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+
+.navbar-toggler {
+    border-color: black;
+}
+
+
 .navbar {
     /* For all properties that are changed with the navbar, it should take 0.2s, to give a smooth change in appearance. This is for the scrolling solid background change effect */
     transition: all 0.2s;
@@ -73,10 +84,12 @@ header {
 } */
 
 
-
-.scrolled {
-    background-color: white;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+/* For larger screens or less, the solid background change of navbar will apply. Not for mobile */
+@media (min-width: 1199.98px) { 
+    .scrolled {
+        background-color: white;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    }
 }
 
 
