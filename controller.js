@@ -1,11 +1,7 @@
 
-
-
-
+// [ Solid background transition ]
 // Window will track if user is scrolling, if so will call setNavBackground
 window.addEventListener("scroll", setNavBackground);
-
-
 function setNavBackground() {
     // Must define navBarElement in scope of this function or else will be initialized as undefined even though it may have been initialized outside of scope
     const navBarElement = document.querySelector(".navbar");
@@ -19,4 +15,10 @@ function setNavBackground() {
     else if(window.scrollY < navHeight) {
         navBarElement.classList.remove("scrolled");
     }
+}
+
+
+
+function func() {
+    console.log("hello");
 }

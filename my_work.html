@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<!-- Make body the flexbox container so that the footer can fill space all the way to bottom. Direction is set to column and vh is set to 100 so to that flexbox container stretches to bottom of viewport allowing footer to TRULY fill all the way to bottom -->
+<body class="d-flex flex-column vh-100">
+
+    
+    <custom-navbar></custom-navbar>
+
+    <!-- Footer container -->
+    <!-- Footer is a flex item and enable grow to fill space all the way to bottom of its flex container/viewport -->
+    <custom-footer></custom-footer>
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    <!-- Put scripts at bottom to maximize loading speed -->
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="controller.js"></script>
+    <script src="nav_and_footer.js"></script>
+</body>
+
+</html>
