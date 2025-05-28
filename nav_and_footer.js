@@ -1,10 +1,13 @@
 // Create a new class that is essentially another element that inherits the default HTMLElement
 class customFooter extends HTMLElement {
 
-    // This method is inherited from HTMLElement and is called each the element is added to the DOM/document and 
+    // This method is inherited from HTMLElement and is called each time the class is added to the DOM/document to adopt the re-usable footer code 
     connectedCallback() {
         this.innerHTML = 
         `
+        <!-- Footer container -->
+        <!-- Footer is a flex item and enable grow to fill space all the way to bottom of its flex container/viewport -->
+        
         <div class="container-fluid pt-5 bg-dark text-center text-white flex-grow-1">
             <div class="row">
                 <div class="col">
@@ -31,6 +34,10 @@ class customNavBar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = 
         `
+        <!-- 
+            Fixed-top to allow navbar to be on top of background image and fixed to the top of screen even when scroll down, so that other elements can stay in the normal flow 
+        -->
+
         <nav class="navbar navbar-expand-lg fw-bold fs-6 fixed-top">
             <!-- Container fluid for navbar to take full width -->
             <div class="container-fluid">
@@ -94,5 +101,6 @@ class customNavBar extends HTMLElement {
     }
 }
 
+// Connects the classes to the custom HTML tag
 customElements.define("custom-footer", customFooter);
 customElements.define("custom-navbar", customNavBar);

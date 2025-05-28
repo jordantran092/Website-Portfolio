@@ -24,6 +24,8 @@
 
 <!-- Make body the flexbox container so that the footer can fill space all the way to bottom. Direction is set to column and vh is set to 100 so to that flexbox container stretches to bottom of viewport allowing footer to TRULY fill all the way to bottom -->
 <body class="d-flex flex-column vh-100">
+    <custom-navbar></custom-navbar>
+
 
     <!-- 
         Make position absolute to be placed on top of background img 
@@ -36,18 +38,13 @@
     <h1 class="display-4 mt-3 mt-md-4 ms-3 ms-md-5 position-absolute" id="myName">Jordan Tran</h1>
 
 
+    <!-- Background image -->
     <img class="img-fluid" src="/media/bg-new.png" alt="">
     
 
-    <!-- 
-        Fixed-top to allow navbar to be on top of background image and fixed to the top of screen even when scroll down, so that other elements can stay in the normal flow 
-    -->
     
-    <custom-navbar></custom-navbar>
 
 
-    <!-- Footer container -->
-    <!-- Footer is a flex item and enable grow to fill space all the way to bottom of its flex container/viewport -->
     <custom-footer></custom-footer>
 
 
