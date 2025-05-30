@@ -105,6 +105,8 @@ header {
 
 /* My Work Page */
 
-/* .my_work_main {
-    margin-top: 13rem;
-} */
+
+
+.project-cards {
+    border-radius: 0;
+}
