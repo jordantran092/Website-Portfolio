@@ -84,7 +84,7 @@ header {
 } */
 
 
-/* For larger screens or less, the solid background change of navbar will apply. Not for mobile */
+/* For larger screens or greater, the solid background change of navbar will apply. Not for mobile */
 @media (min-width: 1199.98px) { 
     .scrolled {
         background-color: white;
@@ -106,7 +106,13 @@ header {
 /* My Work Page */
 
 
-
 .project-cards {
     border-radius: 0;
+}
+
+/* large size or greater */
+@media (min-width: 1199.98px) { 
+    .mt-lg-7 {
+        margin-top: 12rem;
+    }
 }
