@@ -93,13 +93,7 @@ header {
 }
 
 
-.mt-6 {
-    margin-top: 6rem;
-}
 
-.mt-copyright {
-    margin-top: 16rem;
-}
 
 
 
@@ -110,9 +104,28 @@ header {
     border-radius: 0;
 }
 
+
+
+
+
+/* Sizing */
+
+.mt-6 {
+    margin-top: 6rem;
+}
+
+.mt-copyright {
+    margin-top: 16rem;
+}
+
 /* large size or greater */
 @media (min-width: 1199.98px) { 
     .mt-lg-7 {
         margin-top: 12rem;
     }
+}
+
+.px-7 {
+    padding-left: 12rem;
+    padding-right: 12rem;
 }
