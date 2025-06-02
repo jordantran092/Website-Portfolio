@@ -19,7 +19,7 @@ class customFooter extends HTMLElement {
                     <button type="button" class="btn btn-outline-light mt-5" onclick="func()">CONTACT</button>
 
 
-                    <!-- Medium or greater will have size 5, else will have mt-copyright -->
+                    <!-- Medium or greater will have size 5, else smaller screens will have mt-copyright -->
                     <p class="mt-copyright mt-md-5">© 2025 Jordan Tran</p>
                     
                 </div>
@@ -38,7 +38,7 @@ class customNavBar extends HTMLElement {
             Fixed-top to allow navbar to be on top of background image and fixed to the top of screen even when scroll down, so that other elements can stay in the normal flow 
         -->
 
-        <nav class="navbar navbar-expand-lg fw-bold fs-6 fixed-top">
+        <nav class="navbar navbar-expand-xl fw-bold fs-6 fixed-top">
             <!-- Container fluid for navbar to take full width -->
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -75,13 +75,13 @@ class customNavBar extends HTMLElement {
 
 
                             -->
-                            <a class="nav-link active text-black text-center px-4 border border-dark" aria-current="page" href="#">HOME</a>
+                            <a class="nav-link active text-black text-center px-4 border border-dark" aria-current="page" href="index.html">HOME</a>
                         </li>
                         <li class="nav-item ms-4">
                             <a class="nav-link text-black text-center" href="my_work.html">MY WORK</a>
                         </li>
                         <li class="nav-item ms-4">
-                            <a class="nav-link text-black text-center" href="#">ABOUT</a>
+                            <a class="nav-link text-black text-center" href="about.html">ABOUT</a>
                         </li>
                         <li class="nav-item ms-4">
                             <a class="nav-link text-black text-center" href="#">CONTACT</a>

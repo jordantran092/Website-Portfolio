@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+</head>
+
+<!-- Make body the flexbox container so that the footer can fill space all the way to bottom. Direction is set to column and vh is set to 100 so to that flexbox container stretches to bottom of viewport allowing footer to TRULY fill all the way to bottom -->
+<body class="d-flex flex-column vh-100">
+    <custom-navbar></custom-navbar>
+
+
+    <main class="mt-6 mt-lg-7">
+        <!-- mb-5 for space between footer and this as the last element -->
+        <div class="container mb-7">
+            <h1 class="display-5">About</h1>
+
+            <hr class="mt-5"/>
+
+            <div class="row mt-6 mt-lg-7">
+                <div class="col">
+                    <img class="img-fluid" src="media/linkedin.jpg" alt="">
+                </div>
+                <div class="col text-start color">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis asperiores neque laboriosam, assumenda dolorum aspernatur aliquid vel culpa vitae obcaecati amet esse voluptatibus maxime aliquam laborum voluptates. Veritatis, a dolorum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis asperiores neque laboriosam, assumenda dolorum aspernatur aliquid vel culpa vitae obcaecati amet esse voluptatibus maxime aliquam laborum voluptates. Veritatis, a dolorum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis asperiores neque laboriosam, assumenda dolorum aspernatur aliquid vel culpa vitae obcaecati amet esse voluptatibus maxime aliquam laborum voluptates. Veritatis, a dolorum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis asperiores neque laboriosam, assumenda dolorum aspernatur aliquid vel culpa vitae obcaecati amet esse voluptatibus maxime aliquam laborum voluptates. Veritatis, a dolorum!
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </main>
+    <!-- Use display contents to ignore this wrapper element, so that the actual re-usable footer stays as a flex child -->
+    <custom-footer style="display: contents;"></custom-footer>
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    <!-- Put scripts at bottom to maximize loading speed -->
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="controller.js"></script>
+    <script src="nav_and_footer.js"></script>
+</body>
+
+</html>
