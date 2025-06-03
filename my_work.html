@@ -26,12 +26,12 @@
 
             <hr class="mt-5"/>
 
-            <div class="row mt-6 mt-lg-7">
+            <div class="row mt-6 mt-lg-7 justify-content-center">
             
                 <!-- 
                     For larger screens or greater, columns will take up 4 units. Else, full width at 12 units to allow them to stack and become larger on mobile.    
 
-                    mb so cards in smaller screens have space between 
+                    mb so cards in smaller screens have space between, except for last one as no need
                 -->
                 <div class="col-12 col-lg-4 mb-5"> 
                     <div class="card">
@@ -58,7 +58,22 @@
 
                 </div>
 
-                <div class="col-12 col-lg-4"> 
+                <div class="col-12 col-lg-4 mb-5"> 
+                    <div class="card">
+                        <!-- Use ratio to make the video fit properly into the card body -->
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/uUuidO6bjAA" title="YouTube video" allowfullscreen></iframe>
+                        </div>
+                        
+                        
+                        <button type="button" class="btn btn-primary project-cards">Primary</button>
+                    </div>
+
+                </div>
+
+
+                <!-- give mt-5 for larger screens, for better spacing with the last card for my current layout -->
+                <div class="col-12 col-lg-4 mt-lg-5"> 
                     <div class="card">
                         <!-- Use ratio to make the video fit properly into the card body -->
                         <div class="ratio ratio-16x9">
