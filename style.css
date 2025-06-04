@@ -46,7 +46,7 @@ header {
 
 
 /* For large screens or more, the width of each nav item will be 8em */
-@media (max-width: 1199.98px) { 
+@media (max-width: 1200px) { 
     .nav-link {
         width: 8em;
     }
@@ -88,7 +88,7 @@ header {
 
 
 /* For larger screens or greater, the solid background change of navbar will apply. Not for mobile */
-@media (min-width: 1199.98px) { 
+@media (min-width: 1200px) { 
     .scrolled {
         background-color: white;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
@@ -123,14 +123,14 @@ header {
 }
 
 /* large size or greater */
-@media (min-width: 1199.98px) { 
+@media (min-width: 1200px) { 
     .mt-lg-7 {
         margin-top: 12rem;
     }
 }
 
 /* large size or greater */
-@media (min-width: 992px) { 
+@media (min-width: 1200px) { 
     .px-lg-7 {
         padding-left: 12rem !important;
         padding-right: 12rem !important;
@@ -139,4 +139,11 @@ header {
 
 .mb-7 {
     margin-bottom: 12rem;
+}
+
+/* large size or greater */
+@media (min-width: 1200px) { 
+    .picture-width {
+        width: 25% !important;
+    }
 }
