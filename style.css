@@ -147,8 +147,8 @@ header {
 
 
 /* For large screens or less, max width will be applied so that it doesn't take up full width due to bootstrap breakpoint */
-/* @media (max-width: 1199.98px) { 
+@media (max-width: 1199.98px) { 
     .picture-width {
         max-width: 200px !important;
     }
-} */
+}
