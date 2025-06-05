@@ -31,11 +31,7 @@ header {
 
 /* OLD: style="font-size: 4vw;" */
 /* For medium screens or less, font size is smaller, else defaults to initially set font size */
-@media (max-width: 768px) { 
-    #myName {
-        font-size: 1.1rem;
-    }
-}
+
 
 
 .nav-link:hover  {
@@ -44,15 +40,6 @@ header {
 }
 
 
-
-/* For large screens or more, the width of each nav item will be 8em */
-@media (max-width: 1200px) { 
-    .nav-link {
-        width: 8em;
-    }
-
-
-}
 
 
 
@@ -87,6 +74,33 @@ header {
 } */
 
 
+
+
+
+
+
+
+
+
+
+/* Sizing */
+
+@media (max-width: 768px) { 
+    #myName {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* For large screens or more, the width of each nav item will be 8em */
+@media (max-width: 1200px) { 
+    .nav-link {
+        width: 8em;
+    }
+
+
+}
+
 /* For larger screens or greater, the solid background change of navbar will apply. Not for mobile */
 @media (min-width: 1200px) { 
     .scrolled {
@@ -94,24 +108,6 @@ header {
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     }
 }
-
-
-
-
-
-
-/* My Work Page */
-
-
-.project-cards {
-    border-radius: 0;
-}
-
-
-
-
-
-/* Sizing */
 
 .mt-6 {
     margin-top: 6rem;
@@ -137,14 +133,13 @@ header {
     }
 }
 
+.mb-6 {
+    margin-bottom: 6rem;
+}
+
 .mb-7 {
     margin-bottom: 12rem;
 }
-
-
-
-
-
 
 /* For large screens or less, max width will be applied so that it doesn't take up full width due to bootstrap breakpoint */
 @media (max-width: 1199.98px) { 
