@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="css/bootstrap.css">
 
 
@@ -34,26 +34,50 @@
                     </p>
                 </div>
                 <div class="col">
-                    <!-- edit the variable names -->
-                    <form>
+                
+
+                    <!-- needs-validation class for js to fetch the form to prevent submission, novalidate to disable default feedback tooltips -->
+                    <form class="needs-validation" novalidate>
                         <div class="row mb-3">
                             <div class="col">
                                 <label for="inputName" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="inputName" placeholder="First" aria-label="First name">
+                                <input type="text" class="form-control" id="inputName" placeholder="First" required>
+                                <div class="invalid-feedback">
+                                    Please provide a first name
+                                </div>
                             </div>
                             <div class="col">
                                 <!-- Custom margin top added to allow the input box to be in line with first name box because this one doesn't have a label -->
-                                <input type="text" class="form-control" style="margin-top: 2rem;" placeholder="Last" aria-label="Last name">
+                                <input type="text" class="form-control" style="margin-top: 2rem;" placeholder="Last" required>
+                                <div class="invalid-feedback">
+                                    Please provide a last name
+                                </div>
                             </div>
                         </div>
+                        
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email</label>
+                            <label for="inputEmail" class="form-label">Email</label>
                             <!-- type set to HTML5 input type, email, to take advantage of input controls like email verification -->
-                            <input type="email" class="form-control" id="exampleInputEmail1">
+                            <input type="email" class="form-control" id="inputEmail" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid email
+                            </div>
                         </div>
+
                         <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" required>
+                            <div class="invalid-feedback">
+                                Please provide a subject
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" id="description" rows="5" required></textarea>
+                            <div class="invalid-feedback">
+                                Please provide text in the description
+                            </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
