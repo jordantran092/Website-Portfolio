@@ -4,20 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>About</title>
     <link rel="stylesheet" href="css/bootstrap.css">
 
 
     <link rel="stylesheet" href="style.css">
 
-    
 
-    <!-- for roboto -->
-    <!-- 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
-    -->
 
 
 </head>
@@ -26,23 +19,49 @@
 <body class="d-flex flex-column vh-100">
     <custom-navbar></custom-navbar>
 
-
-    <!-- 
-        Make position absolute to be placed on top of background img 
-     
-        For responsiveness:
-        mobile (xs, no breakpoint), margin top is size 3 and margin-start is 3, 
-        for medium size md or greater, the size is larger
-        
-    -->
-    <h1 class="display-4 mt-3 mt-md-4 ms-3 ms-md-5 position-absolute" id="myName">Jordan Tran</h1>
-
-
-    <!-- Background image -->
-    <img class="img-fluid" src="/media/bg-new.png" alt="">
     
+    <main class="mt-6 mt-lg-7">
+        <!-- mb-7 for space between footer and this as the last element -->
+        <div class="container mb-7">
+            <h1 class="display-5">Contact</h1>
 
-    
+            <hr class="mt-5"/>
+
+            <div class="row mt-6">
+                <div class="col">
+                    <p class="fs-5 px-lg-7 px-4">
+                        Hi! I’m Jordan, and I am a student studying Computer Science at York University. I chose to pursue this path because I fell in love with the art of programming early on. From the action of reasoning with logic and the outcome of software being built, this is what I came to appreciate in the art of programming which is why I am here today.
+                    </p>
+                </div>
+                <div class="col">
+                    <!-- edit the variable names -->
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="inputName" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="First" aria-label="First name">
+                            </div>
+                            <div class="col">
+                                <!-- Custom margin top added to allow the input box to be in line with first name box because this one doesn't have a label -->
+                                <input type="text" class="form-control" style="margin-top: 2rem;" placeholder="Last" aria-label="Last name">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email</label>
+                            <!-- type set to HTML5 input type, email, to take advantage of input controls like email verification -->
+                            <input type="email" class="form-control" id="exampleInputEmail1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+  
 
     <!-- Use display contents to ignore this wrapper element, so that the actual re-usable footer stays as a flex child -->
     <custom-footer style="display: contents;"></custom-footer>
