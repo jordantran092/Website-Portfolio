@@ -84,7 +84,7 @@ class customNavBar extends HTMLElement {
                             <a class="nav-link text-black text-center" href="about.html">ABOUT</a>
                         </li>
                         <li class="nav-item ms-4">
-                            <a class="nav-link text-black text-center" href="#">CONTACT</a>
+                            <a class="nav-link text-black text-center" href="contact.html">CONTACT</a>
                         </li>
                         <li class="nav-item ms-4">
                             <a class="nav-link text-black text-center" href="#">RESUME</a>
