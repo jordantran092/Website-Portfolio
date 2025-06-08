@@ -107,11 +107,13 @@ header {
 
 /* Sizing */
 
-@media (max-width: 768px) { 
+/* obsolete for my name */
+/* @media (max-width: 768px) { 
     #myName {
         font-size: 1.1rem;
     }
-}
+} */
+
 
 
 /* For large screens or more, the width of each nav item will be 8em */

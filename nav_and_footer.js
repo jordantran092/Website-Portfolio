@@ -41,8 +41,10 @@ class customNavBar extends HTMLElement {
         <nav class="navbar navbar-expand-xl fw-bold fs-6 fixed-top">
             <!-- Container fluid for navbar to take full width -->
             <div class="container-fluid">
+
+            
                 <a class="navbar-brand" href="#">
-                    <!-- <img src="/media/mylogo.png" width="30" height="30" alt=""> -->
+            
                 </a>
                 
                 <!-- 
@@ -54,7 +56,7 @@ class customNavBar extends HTMLElement {
                     
                 -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="setNavBackgroundOnClick()">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
