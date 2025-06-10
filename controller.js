@@ -1,12 +1,15 @@
 
+
+const navBarElement = document.querySelector(".navbar");
+
 let scrolled = false;
+
 
 // [ Solid background transition ]
 // Window will track if user is scrolling, if so will call setNavBackground
 window.addEventListener("scroll", setNavBackground);
 function setNavBackground() {
-    // Must define HTML elements in scope of this function or else will be initialized as undefined even though it may have been initialized outside of scope
-    const navBarElement = document.querySelector(".navbar");
+    
     const navBarTogglerElement = document.querySelector(".navbar-toggler-icon");
     const navBarContentElement = document.getElementById("navbarSupportedContent");
     
@@ -48,31 +51,38 @@ function setNavBackground() {
 
 
 
+function setNavBackgroundOnClick(button) {
 
-function setNavBackgroundOnClick() {
-    const navBarElement = document.querySelector(".navbar");
-    
+    // Only execute if button is not disabled
+    if(button.disabled == false) {
 
-    if(!scrolled) {
+        // Lock button so that it can't get executed until time out finishes which corresponds to waiting until navbar transition finishes
+        button.disabled = true;
+
+        /*
         
-        if(window.getComputedStyle(navBarElement).backgroundColor == "rgb(255, 255, 255)") {
-            navBarElement.classList.remove("scrolled");
+        Only decide to remove or add when user has not scrolled down past original navbar height because once scrolled past the navbar height, this decision does should not be in effect. Whether scrolled or not is determined by setNavBackground()
+
+        Scrolled class is simply just to add the solid background change of css properties for navbar
+
+        */
+        if(!scrolled) {
+            
+            if(window.getComputedStyle(navBarElement).backgroundColor == "rgb(255, 255, 255)") {
+                navBarElement.classList.remove("scrolled");
+            }
+            else {
+                navBarElement.classList.add("scrolled");
+            }
         }
-        else {
-            navBarElement.classList.add("scrolled");
-        }
+
+
+        // Set timeout for 500ms to approximately correspond to when solid background color change in navbar is done. Then, once transition is done, unlock the button. Do not set to the real 200ms transition in CSS of navbar class, because it's still too fast and will bug the background color
+
+        setTimeout(function() {
+            button.disabled = false;
+        }, 500);
     }
 
 
-    // if(!scrolled && expanded == false) {
-    //     navBarElement.classList.add("scrolled");
-    //     expanded = !expanded;
-    // }
-    // else if(!scrolled && expanded) {
-    
-    //     expanded = !expanded;
-    // }
-
-
 }
-
