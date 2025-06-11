@@ -3,11 +3,30 @@
 const navBarElement = document.querySelector(".navbar");
 const navBarTogglerElement = document.querySelector(".navbar-toggler-icon");
 
-let scrolled = false;
+
+
+
+// Set border correspondingly, each time a page is loaded
+let navItemElem;
+if(window.location.pathname === '/index.html' || window.location.pathname === "/") {
+    navItemElem = document.getElementById("index");
+}
+else if(window.location.pathname === '/my_work.html') {
+    navItemElem = document.getElementById("myWork");
+}
+else if(window.location.pathname === '/about.html') {
+    navItemElem = document.getElementById("about");
+}
+else if(window.location.pathname === '/contact.html') {
+    navItemElem = document.getElementById("contact");
+}
+navItemElem.classList.add("border", "border-dark");
+
 
 
 // [ Solid background transition ]
 // Window will track if user is scrolling, if so will call setNavBackground
+let scrolled = false;
 window.addEventListener("scroll", setNavBackground);
 function setNavBackground() {
     
@@ -37,7 +56,7 @@ function setNavBackground() {
             navBarElement.classList.remove("scrolled");
 
             // Changes navbar toggler back to white, only for home page, for easier visibility
-            if (window.location.pathname === '/') {
+            if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
                 navBarTogglerElement.style.backgroundImage = `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`;
             }
         }
@@ -72,7 +91,7 @@ function setNavBackgroundOnClick(button) {
                 navBarElement.classList.remove("scrolled");
 
                 // Changes navbar toggler back to white, only for home page, for easier visibility
-                if (window.location.pathname === '/') {
+                if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
                     navBarTogglerElement.style.backgroundImage = `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`;
                 }
             }
@@ -80,7 +99,7 @@ function setNavBackgroundOnClick(button) {
                 navBarElement.classList.add("scrolled");
 
                 // Changes navbar toggler to black, only for home page, for easier visibility
-                if (window.location.pathname === '/') {
+                if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
                     navBarTogglerElement.style.backgroundImage = `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`;
                 }
             }

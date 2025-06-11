@@ -71,22 +71,17 @@ class customNavBar extends HTMLElement {
 
                 
                         <li class="nav-item ms-4">
-                            <!-- if border is too tight to content, px-4 
-                                
-                            border border-dark is TEMP
-
-
-                            -->
-                            <a class="nav-link active text-black text-center px-4 border border-dark" aria-current="page" href="index.html">HOME</a>
+                            <!-- give px-4 so that border isn't too close to content -->
+                            <a class="nav-link text-black text-center px-4" href="index.html" id="index">HOME</a>
                         </li>
                         <li class="nav-item ms-4">
-                            <a class="nav-link text-black text-center" href="my_work.html">MY WORK</a>
+                            <a class="nav-link text-black text-center px-4" href="my_work.html" id="myWork">MY WORK</a>
                         </li>
                         <li class="nav-item ms-4">
-                            <a class="nav-link text-black text-center" href="about.html">ABOUT</a>
+                            <a class="nav-link text-black text-center px-4" href="about.html" id="about">ABOUT</a>
                         </li>
                         <li class="nav-item ms-4">
-                            <a class="nav-link text-black text-center" href="contact.html">CONTACT</a>
+                            <a class="nav-link text-black text-center px-4" href="contact.html" id="contact">CONTACT</a>
                         </li>
                         <li class="nav-item ms-4">
                             <a class="nav-link text-black text-center" href="#">RESUME</a>
