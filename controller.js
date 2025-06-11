@@ -1,6 +1,7 @@
 
 
 const navBarElement = document.querySelector(".navbar");
+const navBarTogglerElement = document.querySelector(".navbar-toggler-icon");
 
 let scrolled = false;
 
@@ -10,7 +11,6 @@ let scrolled = false;
 window.addEventListener("scroll", setNavBackground);
 function setNavBackground() {
     
-    const navBarTogglerElement = document.querySelector(".navbar-toggler-icon");
     const navBarContentElement = document.getElementById("navbarSupportedContent");
     
     const navHeight = navBarElement.offsetHeight;
@@ -37,7 +37,7 @@ function setNavBackground() {
             navBarElement.classList.remove("scrolled");
 
             // Changes navbar toggler back to white, only for home page, for easier visibility
-            if (window.location.pathname === '/index.html') {
+            if (window.location.pathname === '/') {
                 navBarTogglerElement.style.backgroundImage = `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`;
             }
         }
@@ -70,9 +70,19 @@ function setNavBackgroundOnClick(button) {
             
             if(window.getComputedStyle(navBarElement).backgroundColor == "rgb(255, 255, 255)") {
                 navBarElement.classList.remove("scrolled");
+
+                // Changes navbar toggler back to white, only for home page, for easier visibility
+                if (window.location.pathname === '/') {
+                    navBarTogglerElement.style.backgroundImage = `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`;
+                }
             }
             else {
                 navBarElement.classList.add("scrolled");
+
+                // Changes navbar toggler to black, only for home page, for easier visibility
+                if (window.location.pathname === '/') {
+                    navBarTogglerElement.style.backgroundImage = `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`;
+                }
             }
         }
 

@@ -14,7 +14,7 @@ class customFooter extends HTMLElement {
                     <!-- Medium screens or larger have size 5, screens smaller than md will default to mt-6 class -->
                     <h1 class="mt-6 mt-md-5">Get In Touch</h1>
                     
-                    <p class="mt-4">If you have any questions or concerns, feel free to contact me</p>
+                    <p class="mt-4 px-1">If you have any questions or concerns, feel free to contact me</p>
                     
                     <button type="button" class="btn btn-outline-light mt-5" onclick="func()">CONTACT</button>
 
