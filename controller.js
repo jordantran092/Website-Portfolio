@@ -1,12 +1,10 @@
-
-
 const navBarElement = document.querySelector(".navbar");
 const navBarTogglerElement = document.querySelector(".navbar-toggler-icon");
 
 
 
 
-// Set border correspondingly, each time a page is loaded
+// Set border around nav item correspondingly, each time a page is loaded
 let navItemElem;
 if(window.location.pathname === '/index.html' || window.location.pathname === "/") {
     navItemElem = document.getElementById("index");
@@ -21,6 +19,15 @@ else if(window.location.pathname === '/contact.html') {
     navItemElem = document.getElementById("contact");
 }
 navItemElem.classList.add("border", "border-dark");
+
+
+
+
+
+
+
+
+
 
 
 
