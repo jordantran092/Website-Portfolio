@@ -108,7 +108,7 @@
 
             
             
-            <div class="row mt-6 row-cols-lg-12 row-cols-md-8 justify-content-center"> 
+            <div class="row mt-6 justify-content-center"> 
                 <div class="col-lg-1 col-md-2 col-3">
                     <img class="img-fluid" src="media/logos/java.webp">
 
@@ -125,6 +125,13 @@
                     <img class="img-fluid" src="media/logos/C.png">
 
                 </div>
+
+                <!-- Create a 100% width element that becomes a block element to force a wrap/new line for the columns at this point, except for screen sizes large and greater
+                 
+                This is so that I can make the first 8 items stay on one row on large screens and greater, and then wrap on smaller screens -->
+                <div class="w-100 d-lg-none d-block"></div>
+
+
                 <div class="col-lg-1 col-md-2 col-3">
                     <img class="img-fluid" src="media/logos/linux.png">
 
@@ -148,6 +155,10 @@
                 <div class="col-lg-3 col-md-6 col-8">
                     <img class="img-fluid" src="media/logos/pygame.png">
                 </div>
+
+                <!-- Create a 100% width element that becomes a block element to force a wrap/new line for the columns at this point, except for screen sizes large and greater -->
+                <div class="w-100 d-lg-none d-block"></div>
+
                 <div class="col-lg-3 col-md-6 col-8 mt-3">
                     <img class="img-fluid" src="media/logos/riscv.png">
                 </div>
@@ -157,7 +168,7 @@
 
 
             <div class="row mt-lg-4 mt-3 justify-content-center ">
-                <div class="col-lg-2 col-md-5 col-6">
+                <div class="col-lg-2 col-md-4 col-6">
                     <img class="img-fluid" src="media/logos/bash.png">
                 </div>
                 <!-- pt-2 to be in line with bash pic on mobile -->
