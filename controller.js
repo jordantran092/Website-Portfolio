@@ -122,3 +122,60 @@ function setNavBackgroundOnClick(button) {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Get all forms the need validation to utilize custom Bootstrap validation styles
+var forms = document.querySelectorAll('.needs-validation');
+
+// Array.prototype.slice.call is used because forms is a non-array object, returning the elements in a new array. Then for each is called onto this array and applies the corresponding function with variable 'form' taking on each element
+Array.prototype.slice.call(forms)
+.forEach(function (form) {
+    
+    // Tracks each form for submission and then calls corresponding function
+    form.addEventListener('submit', function (event) {
+        // Checks if input in form was valid, if not then 
+        if (!form.checkValidity()) {
+            // Prevent any default action to handle the event and prevents any calling of the same submit event for other connected elements
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        // Let form be validated
+        form.classList.add('was-validated');
+    }, false);
+});
