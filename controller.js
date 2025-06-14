@@ -4,33 +4,6 @@ const navBarTogglerElement = document.querySelector(".navbar-toggler-icon");
 
 
 
-// Set border around nav item correspondingly, each time a page is loaded
-let navItemElem;
-if(window.location.pathname === '/index.html' || window.location.pathname === "/") {
-    navItemElem = document.getElementById("index");
-}
-else if(window.location.pathname === '/my_work.html') {
-    navItemElem = document.getElementById("myWork");
-}
-else if(window.location.pathname === '/about.html') {
-    navItemElem = document.getElementById("about");
-}
-else if(window.location.pathname === '/contact.html') {
-    navItemElem = document.getElementById("contact");
-}
-navItemElem.classList.add("border", "border-dark");
-
-
-
-
-
-
-
-
-
-
-
-
 // [ Solid background transition ]
 // Window will track if user is scrolling, if so will call setNavBackground
 let scrolled = false;
@@ -125,57 +98,87 @@ function setNavBackgroundOnClick(button) {
 
 
 
+// Set border around nav item correspondingly, each time a page is loaded
+let navItemElem;
+if(window.location.pathname === '/index.html' || window.location.pathname === "/") {
+    navItemElem = document.getElementById("index");
+}
+else if(window.location.pathname === '/my_work.html') {
+    navItemElem = document.getElementById("myWork");
+}
+else if(window.location.pathname === '/about.html') {
+    navItemElem = document.getElementById("about");
+}
+else if(window.location.pathname === '/contact.html') {
+    navItemElem = document.getElementById("contact");
+}
+navItemElem.classList.add("border", "border-dark");
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// [Form validation]
 // Get all forms the need validation to utilize custom Bootstrap validation styles
-var forms = document.querySelectorAll('.needs-validation');
+let allForms = document.querySelectorAll(".needs-validation");
 
 // Array.prototype.slice.call is used because forms is a non-array object, returning the elements in a new array. Then for each is called onto this array and applies the corresponding function with variable 'form' taking on each element
-Array.prototype.slice.call(forms)
-.forEach(function (form) {
-    
-    // Tracks each form for submission and then calls corresponding function
-    form.addEventListener('submit', function (event) {
-        // Checks if input in form was valid, if not then 
-        if (!form.checkValidity()) {
-            // Prevent any default action to handle the event and prevents any calling of the same submit event for other connected elements
-            event.preventDefault();
-            event.stopPropagation();
-        }
+Array.prototype.slice.call(allForms).forEach(
+    function(form) {
 
-        // Let form be validated
-        form.classList.add('was-validated');
-    }, false);
-});
+        // Tracks each form for submission and then calls corresponding function
+        form.addEventListener("submit", 
+            function(event) {
+                // Checks if input in form was valid
+                if(!form.checkValidity()) {
+                     // Prevent any default action to handle the event and prevents any calling of the same submit event for other connected elements
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+
+                // Indicate form is validated, e.g. to help alert what's missing when trying to submit
+                form.classList.add("was-validated");
+
+            }
+        , false);
+    }
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
