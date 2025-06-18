@@ -107,6 +107,10 @@ header {
 
 /* Sizing */
 
+
+
+
+
 /* obsolete for my name */
 /* @media (max-width: 768px) { 
     #myName {
@@ -160,9 +164,17 @@ header {
     margin-bottom: 12rem;
 }
 
-/* For large screens or less, max width will be applied so that it doesn't take up full width due to bootstrap breakpoint */
-@media (max-width: 1199.98px) { 
+/* For medium screens or less, max width will be applied so that it doesn't take up full width due to bootstrap breakpoint */
+@media (max-width: 991.98px) { 
     .picture-width {
         max-width: 200px !important;
+    }
+}
+
+
+/* For medium screens or less, max width will be applied so that it doesn't take up full width due to bootstrap breakpoint */
+@media (max-width: 991.98px) { 
+    .picture-width-success {
+        max-width: 100px !important;
     }
 }
