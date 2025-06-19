@@ -112,7 +112,11 @@ else if(window.location.pathname === '/about.html') {
 else if(window.location.pathname === '/contact.html') {
     navItemElem = document.getElementById("contact");
 }
-navItemElem.classList.add("border", "border-dark");
+
+if(navItemElem != null) {
+    navItemElem.classList.add("border", "border-dark");
+}
+
 
 
 
