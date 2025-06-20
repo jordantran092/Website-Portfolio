@@ -6,38 +6,6 @@
 */
 
 
-header {
-    /* position: absolute; */
-
-
-    /* 100 * vh = total viewport height. Helps to re-size background img to fit into view port properly*/
-    /* height: 100vh; */ 
-    /* width: 100vw;  */
-
-    
-     /* fix aspect ratio */
-     /* object-fit: cover; */
-
-     
-
-
-
-
-/* 
-     background-image: url("/media/bg-new.png");
-     height: 100vh;
-     min-height: 400px;
-     background-size: cover; */
-
-    
-
-}
-
-
-/* OLD: style="font-size: 4vw;" */
-/* For medium screens or less, font size is smaller, else defaults to initially set font size */
-
-
 
 .nav-link:hover  {
     /* hover color change on nav item */
@@ -46,27 +14,14 @@ header {
 
 
 
-
-
-
 /* Navbar toggler */
 .navbar-toggler-icon {
     /* %28 and %29 are quotes */
-    
-    
-
-    /* --bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    background-image: var(--bg-img); */
 
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 
 }
 
-/* .navbar-toggler-icon {
-    %28 and %29 are quotes
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
- 
-} */
 
 
 
@@ -98,57 +53,12 @@ header {
 }
 
 
-
-
-/* 
-.active {
-    color:green !important;
-} */
-
-
-
-
-
-
-
-
-
-
-
-/* Sizing */
-
-
-
-
-
-/* obsolete for my name */
-/* @media (max-width: 768px) { 
-    #myName {
-        font-size: 1.1rem;
-    }
-} */
-
-
-
 /* For large screens or more, the width of each nav item will be 8em */
 @media (max-width: 1200px) { 
     .nav-link {
         width: 8em;
     }
 
-
-}
-
-
-
-
-.mt-6 {
-    margin-top: 6rem;
-}
-
-.mt-copyright {
-    margin-top: 10rem;
-    
 }
 
 /* large size or greater */
@@ -166,14 +76,6 @@ header {
     }
 }
 
-.mb-6 {
-    margin-bottom: 6rem;
-}
-
-.mb-7 {
-    margin-bottom: 12rem;
-}
-
 /* For medium screens or less, max width will be applied so that it doesn't take up full width due to bootstrap breakpoint */
 @media (max-width: 991.98px) { 
     .picture-width {
@@ -188,3 +90,27 @@ header {
         max-width: 100px !important;
     }
 }
+
+
+
+
+/* Sizing */
+
+.mt-6 {
+    margin-top: 6rem;
+}
+
+.mt-copyright {
+    margin-top: 10rem;
+    
+}
+
+.mb-6 {
+    margin-bottom: 6rem;
+}
+
+.mb-7 {
+    margin-bottom: 12rem;
+}
+
+

@@ -44,7 +44,7 @@
                      
                     novalidate to disable default feedback tooltips 
                     
-                    action sends the data to formsubmit
+                    action sends the data to formsubmit with an alias for my email address
                     
                     POST method allows submitted data to not be visible in URL 
                     
@@ -57,12 +57,14 @@
                         <!-- Disable the captcha -->
                         <input type="hidden" name="_captcha" value="false">
 
-                        <!-- Success page message link. Can also provide long url in value -->
+                        <!-- Success page message link -->
                         <input type="hidden" name="_next" value="https://jordantran092.github.io/Website-Portfolio/success.html">
                         
                         <div class="row mb-3">
                             <div class="col">
                                 <label for="inputName" class="form-label">Name</label>
+
+                                
                                 <!-- Have to provide a name attribute for formsubmit to differentiate the inputs 
                                  
                                 &nbsp helps to indicate it's a space for formsubmit to make the label cleaner in the email -->

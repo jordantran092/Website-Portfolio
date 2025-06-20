@@ -47,17 +47,18 @@ class customNavBar extends HTMLElement {
             <div class="container-fluid">
 
             
-                <a class="navbar-brand" href="#">
-            
-                </a>
+                <!-- 
+                Logo
+
+                <a class="navbar-brand" href="#"></a>
+                -->
+
                 
                 <!-- 
-                    nav bar toggler when window is at a smaller width e.g. mobile device, to expand/collapse navbar items
+                    nav bar toggler appears when window is at a smaller width e.g. mobile device, for expand/collapse navbar items
 
-                    will toggle elements in div with id navbarSupportedContent 
+                    will toggle items in the div with #navbarSupportedContent 
 
-                    
-                    
                 -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="setNavBackgroundOnClick(this)">
@@ -68,7 +69,6 @@ class customNavBar extends HTMLElement {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- 
                         mx-auto centers the navbar
-                        margin adds 
                     -->
                     <ul class="navbar-nav mx-auto my-4">
                         <!-- Giving it class nav-item gives this item the properties to become a navbar item -->
@@ -90,9 +90,6 @@ class customNavBar extends HTMLElement {
                         <li class="nav-item ms-4">
                             <a class="nav-link text-black text-center" href="/emmet.pdf" target="_blank">RESUME</a>
                         </li>
-
-                
-            
 
                     </ul>
                 </div>
