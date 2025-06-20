@@ -1,4 +1,8 @@
-// Create a new class that is essentially another element that inherits the default HTMLElement
+//  * Copyright 2025, Jordan Tran
+//  * All rights reserved. 
+ 
+
+// Custom Elements: Create a new class that is essentially another element that inherits the default HTMLElement
 class customFooter extends HTMLElement {
 
     // This method is inherited from HTMLElement and is called each time the class is added to the DOM/document to adopt the re-usable footer code 
@@ -16,7 +20,7 @@ class customFooter extends HTMLElement {
                     
                     <p class="mt-4 px-1">If you have any questions or concerns, feel free to contact me</p>
                     
-                    <button type="button" class="btn btn-outline-light mt-5" onclick="func()">CONTACT</button>
+                    <button type="button" class="btn btn-outline-light mt-5" onclick="window.location.href='/contact.html'">CONTACT</button>
 
 
                     <!-- Medium or greater will have size 5, else smaller screens will have mt-copyright -->
@@ -84,7 +88,7 @@ class customNavBar extends HTMLElement {
                             <a class="nav-link text-black text-center px-4" href="contact.html" id="contact">CONTACT</a>
                         </li>
                         <li class="nav-item ms-4">
-                            <a class="nav-link text-black text-center" href="#">RESUME</a>
+                            <a class="nav-link text-black text-center" href="/emmet.pdf" target="_blank">RESUME</a>
                         </li>
 
                 

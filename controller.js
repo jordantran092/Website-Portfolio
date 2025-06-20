@@ -1,3 +1,7 @@
+//  * Copyright 2025, Jordan Tran
+//  * All rights reserved. 
+
+
 const navBarElement = document.querySelector(".navbar");
 const navBarTogglerElement = document.querySelector(".navbar-toggler-icon");
 
