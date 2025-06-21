@@ -4,6 +4,9 @@
 
 const navBarElement = document.querySelector(".navbar");
 const navBarTogglerElement = document.querySelector(".navbar-toggler-icon");
+const navBarContentElement = document.getElementById("navbarSupportedContent");
+
+
 
 
 
@@ -13,8 +16,7 @@ const navBarTogglerElement = document.querySelector(".navbar-toggler-icon");
 let scrolled = false;
 window.addEventListener("scroll", setNavBackground);
 function setNavBackground() {
-    
-    const navBarContentElement = document.getElementById("navbarSupportedContent");
+
     
     const navHeight = navBarElement.offsetHeight;
     
@@ -150,6 +152,30 @@ Array.prototype.slice.call(allForms).forEach(
     }
 );
 
+
+let bsCollapse = new bootstrap.Collapse(navBarContentElement, { toggle: false });
+const a = document.getElementById("navbar-toggler");
+navBarContentElement.addEventListener("shown.bs.collapse",
+    function() { 
+
+        
+        // clicks anywhere besides navbar region
+        document.addEventListener("click", 
+            function(event) {
+
+
+                let clickedElement = event.target;
+                if(!navBarElement.contains(clickedElement)) {
+                    // hide 
+                    bsCollapse.hide();
+                    setNavBackgroundOnClick(a);
+                }
+            }
+        )
+
+
+    }
+)
 
 
 

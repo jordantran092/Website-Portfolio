@@ -47,12 +47,9 @@ class customNavBar extends HTMLElement {
             <div class="container-fluid">
 
             
-                <!-- 
-                Logo
-
-                <a class="navbar-brand" href="#"></a>
-                -->
-
+                <!-- Logo -->
+                <a class="navbar-brand"></a>
+                
                 
                 <!-- 
                     nav bar toggler appears when window is at a smaller width e.g. mobile device, for expand/collapse navbar items
