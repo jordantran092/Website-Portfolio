@@ -99,8 +99,9 @@ function setNavBackgroundOnClick(button) {
         }, 500);
     }
 
-
 }
+
+
 
 
 
@@ -154,28 +155,32 @@ Array.prototype.slice.call(allForms).forEach(
 
 
 let bsCollapse = new bootstrap.Collapse(navBarContentElement, { toggle: false });
-const a = document.getElementById("navbar-toggler");
-navBarContentElement.addEventListener("shown.bs.collapse",
-    function() { 
+const navBarTogglerButton = document.querySelector(".navbar-toggler");
+
+
 
         
-        // clicks anywhere besides navbar region
-        document.addEventListener("click", 
-            function(event) {
+// clicks anywhere besides navbar region
+document.addEventListener("click", 
+    function(event) {
 
+        if(navBarContentElement.classList.contains("show")) {
+            let clickedElement = event.target;
+            if(!navBarElement.contains(clickedElement)) {
 
-                let clickedElement = event.target;
-                if(!navBarElement.contains(clickedElement)) {
-                    // hide 
+                if(navBarTogglerButton.disabled == false) {
                     bsCollapse.hide();
-                    setNavBackgroundOnClick(a);
+                    setNavBackgroundOnClick(navBarTogglerButton);
                 }
+
+                
             }
-        )
-
-
+        }
     }
 )
+
+
+
 
 
 
