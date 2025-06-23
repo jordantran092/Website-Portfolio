@@ -5,7 +5,8 @@
 const navBarElement = document.querySelector(".navbar");
 const navBarTogglerElement = document.querySelector(".navbar-toggler-icon");
 const navBarContentElement = document.getElementById("navbarSupportedContent");
-
+const navBarTogglerButton = document.querySelector(".navbar-toggler");
+const navHeight = navBarElement.offsetHeight; // placed at beginning because only want initial height of navbar while collapse element is hidden
 
 
 
@@ -16,17 +17,11 @@ const navBarContentElement = document.getElementById("navbarSupportedContent");
 let scrolled = false;
 window.addEventListener("scroll", setNavBackground);
 function setNavBackground() {
-
-    
-    const navHeight = navBarElement.offsetHeight;
-    
-
-    
-    
         
     // Adds the scrolled class to navbar, giving the solid background to navbar if scrolled past the navbar height. Else, removes the solid background
     if(window.scrollY >= navHeight) {
-        if(!navBarContentElement.classList.contains("show")) {
+        // Only execute if navbar collapse is not shown and not in transition
+        if(!navBarContentElement.classList.contains("show") && !navBarContentElement.classList.contains("collapsing")) {
             navBarElement.classList.add("scrolled");
             
             // Changes navbar toggler to black
@@ -38,13 +33,15 @@ function setNavBackground() {
         
     }
     else if(window.scrollY < navHeight) {
-        if(!navBarContentElement.classList.contains("show")) {
+        if(!navBarContentElement.classList.contains("show") && !navBarContentElement.classList.contains("collapsing")) {
             navBarElement.classList.remove("scrolled");
 
             // Changes navbar toggler back to white, only for home page, for easier visibility
             if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
                 navBarTogglerElement.style.backgroundImage = `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`;
             }
+
+            
         }
 
         scrolled = false;
@@ -66,20 +63,26 @@ function setNavBackgroundOnClick(button) {
 
         /*
         
-        Only decide to remove or add when user has not scrolled down past original navbar height because once scrolled past the navbar height, this decision does should not be in effect. Whether scrolled or not is determined by setNavBackground()
+        Only decide to remove or add the solid background color of navbar, when user has not scrolled down past original navbar height because once scrolled past the navbar height, this decision does should not be in effect. Whether scrolled or not is determined by setNavBackground()
 
         Scrolled class is simply just to add the solid background change of css properties for navbar
 
         */
         if(!scrolled) {
             
-            if(window.getComputedStyle(navBarElement).backgroundColor == "rgb(255, 255, 255)") {
+            
+            // When the navbar collapse element is being hidden, then the solid background color is removed.
+            
+            // Otherwise, the solid background color is added. (Aria expanded is true when collapse element is shown before toggler is pressed, then aria expanded is false by the time this function executes)
+            if(navBarTogglerButton.getAttribute("aria-expanded") == "false") {
                 navBarElement.classList.remove("scrolled");
 
                 // Changes navbar toggler back to white, only for home page, for easier visibility
                 if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
                     navBarTogglerElement.style.backgroundImage = `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`;
                 }
+
+                
             }
             else {
                 navBarElement.classList.add("scrolled");
@@ -153,21 +156,17 @@ Array.prototype.slice.call(allForms).forEach(
     }
 );
 
-
+// Toggle to false as the initial state of the collapse element as hidden
 let bsCollapse = new bootstrap.Collapse(navBarContentElement, { toggle: false });
-const navBarTogglerButton = document.querySelector(".navbar-toggler");
-
-
-
-        
-// clicks anywhere besides navbar region
 document.addEventListener("click", 
     function(event) {
 
+        // If navbar collapse is shown, then check if clicked element is not anywhere in the region of navbar. 
         if(navBarContentElement.classList.contains("show")) {
             let clickedElement = event.target;
             if(!navBarElement.contains(clickedElement)) {
 
+                // If toggler is unlocked, then allow user to hide the navbar collapse and remove nav background solid color accordingly
                 if(navBarTogglerButton.disabled == false) {
                     bsCollapse.hide();
                     setNavBackgroundOnClick(navBarTogglerButton);
