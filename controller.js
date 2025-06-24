@@ -9,6 +9,12 @@ const navBarTogglerButton = document.querySelector(".navbar-toggler");
 const navHeight = navBarElement.offsetHeight; // placed at beginning because only want initial height of navbar while collapse element is hidden
 
 
+// URLs for re-usability in HTML pages
+let urlIndex = "/index.html";
+let urlMyWork = "/my_work.html";
+let urlAbout = "/about.html";
+let urlContact = "/contact.html";
+let urlResume = "/emmet.pdf";
 
 
 
