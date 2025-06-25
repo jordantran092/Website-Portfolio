@@ -9,42 +9,8 @@ const navBarTogglerButton = document.querySelector(".navbar-toggler");
 const navHeight = navBarElement.offsetHeight; // placed at beginning because only want initial height of navbar while collapse element is hidden
 
 
-// URLs for re-usability in HTML pages
-let urlIndex = "/index.html";
-let urlMyWork = "/my_work.html";
-let urlAbout = "/about.html";
-let urlContact = "/contact.html";
-let urlResume = "/emmet.pdf";
 
 
-
-/*
-
-Set the hrefs for the buttons that use the common href links such as href for index page. This is done through variables so that e.g. if the url for the index page changes, it only needs to be changed through that one variable. This also allows the buttons to be middle mouse clickable for additional functionality. 
-
-Otherwise, other buttons will not have that functionality and don't need to be under this function.
-
-In the case of more buttons in the future utilizing the same href links, it'll be much more easier to change the urls.
-
-*/
-function setMainButtonsHref() {
-    const elements = ["index", "myWork", "about", "contact", "resume"];
-    const urls = [urlIndex, urlMyWork, urlAbout, urlContact, urlResume];
-
-    /*
-    
-    Each button corresponds to its url in the same index of both arrays, and so their hrefs can be set correspondingly
-
-    */
-    let elem = null;
-    for(let i = 0; i < elements.length; i++) {
-        elem = document.getElementById(elements[i]);
-        elem.href = urls[i];
-    }
-
-}
-// This function should be called only when document has been loaded
-document.addEventListener("DOMContentLoaded", setMainButtonsHref); 
 
 
 
@@ -73,7 +39,7 @@ function setNavBackground() {
             navBarElement.classList.remove("scrolled");
 
             // Changes navbar toggler back to white, only for home page, for easier visibility
-            if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+            if (window.location.pathname === '/' || window.location.pathname === 'index.html') {
                 navBarTogglerElement.style.backgroundImage = `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`;
             }
 
@@ -114,7 +80,7 @@ function setNavBackgroundOnClick(button) {
                 navBarElement.classList.remove("scrolled");
 
                 // Changes navbar toggler back to white, only for home page, for easier visibility
-                if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+                if (window.location.pathname === '/' || window.location.pathname === 'index.html') {
                     navBarTogglerElement.style.backgroundImage = `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`;
                 }
 
@@ -124,7 +90,7 @@ function setNavBackgroundOnClick(button) {
                 navBarElement.classList.add("scrolled");
 
                 // Changes navbar toggler to black, only for home page, for easier visibility
-                if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+                if (window.location.pathname === '/' || window.location.pathname === 'index.html') {
                     navBarTogglerElement.style.backgroundImage = `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`;
                 }
             }
@@ -146,16 +112,16 @@ function setNavBackgroundOnClick(button) {
 
 // Set border around nav item correspondingly, each time a page is loaded
 let navItemElem;
-if(window.location.pathname === '/index.html' || window.location.pathname === "/") {
+if(window.location.pathname === 'index.html' || window.location.pathname === "/") {
     navItemElem = document.getElementById("index");
 }
-else if(window.location.pathname === '/my_work.html') {
+else if(window.location.pathname === 'my_work.html') {
     navItemElem = document.getElementById("myWork");
 }
-else if(window.location.pathname === '/about.html') {
+else if(window.location.pathname === 'about.html') {
     navItemElem = document.getElementById("about");
 }
-else if(window.location.pathname === '/contact.html') {
+else if(window.location.pathname === 'contact.html') {
     navItemElem = document.getElementById("contact");
 }
 

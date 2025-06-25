@@ -20,8 +20,7 @@ class customFooter extends HTMLElement {
                     
                     <p class="mt-4 px-1">If you have any questions or concerns, feel free to contact me</p>
                     
-                    <!-- Use onclick so that href can utilize the reusable url variable. Have to concat urlContact with '', or else it won't recognize urlContact as a javascript variable. NOTE: not middle mouse clickable. -->
-                    <button type="button" class="btn btn-outline-light mt-5" onclick="location.href=''+urlContact;">CONTACT</button>
+                    <button type="button" class="btn btn-outline-light mt-5" onclick="location.href='contact.html'">CONTACT</button>
 
 
                     <!-- Medium or greater will have size 5, else smaller screens will have mt-copyright -->
@@ -74,21 +73,19 @@ class customNavBar extends HTMLElement {
                 
                         <li class="nav-item ms-4">
                             <!-- give px-4 so that border isn't too close to content -->
-
-                            
-                            <a class="nav-link text-black text-center px-4" id="index">HOME</a>
+                            <a class="nav-link text-black text-center px-4" href="index.html" id="index">HOME</a>
                         </li>
                         <li class="nav-item ms-4">
-                            <a class="nav-link text-black text-center px-4" id="myWork">MY WORK</a>
+                            <a class="nav-link text-black text-center px-4" href="my_work.html" id="myWork">MY WORK</a>
                         </li>
                         <li class="nav-item ms-4">
-                            <a class="nav-link text-black text-center px-4" id="about">ABOUT</a>
+                            <a class="nav-link text-black text-center px-4" href="about.html" id="about">ABOUT</a>
                         </li>
                         <li class="nav-item ms-4">
-                            <a class="nav-link text-black text-center px-4" id="contact">CONTACT</a>
+                            <a class="nav-link text-black text-center px-4" href="contact.html" id="contact">CONTACT</a>
                         </li>
                         <li class="nav-item ms-4">
-                            <a class="nav-link text-black text-center" target="_blank" id="resume">RESUME</a>
+                            <a class="nav-link text-black text-center" href="emmet.pdf" target="_blank">RESUME</a>
                         </li>
 
                     </ul>
