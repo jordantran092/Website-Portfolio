@@ -20,7 +20,7 @@ class customFooter extends HTMLElement {
                     
                     <p class="mt-4 px-1">If you have any questions or concerns, feel free to contact me</p>
                     
-                    <button type="button" class="btn btn-outline-light mt-5" onclick="location.href='contact.html'">CONTACT</button>
+                    <button type="button" class="btn btn-outline-light mt-5" onclick="location.href='contact.html';">CONTACT</button>
 
 
                     <!-- Medium or greater will have size 5, else smaller screens will have mt-copyright -->
