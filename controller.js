@@ -18,6 +18,36 @@ let urlResume = "/emmet.pdf";
 
 
 
+/*
+
+Set the hrefs for the buttons that use the common href links such as href for index page. This is done through variables so that e.g. if the url for the index page changes, it only needs to be changed through that one variable. This also allows the buttons to be middle mouse clickable for additional functionality. 
+
+Otherwise, other buttons will not have that functionality and don't need to be under this function.
+
+In the case of more buttons in the future utilizing the same href links, it'll be much more easier to change the urls.
+
+*/
+function setMainButtonsHref() {
+    const elements = ["index", "myWork", "about", "contact", "resume"];
+    const urls = [urlIndex, urlMyWork, urlAbout, urlContact, urlResume];
+
+    /*
+    
+    Each button corresponds to its url in the same index of both arrays, and so their hrefs can be set correspondingly
+
+    */
+    let elem = null;
+    for(let i = 0; i < elements.length; i++) {
+        elem = document.getElementById(elements[i]);
+        elem.href = urls[i];
+    }
+
+}
+// This function should be called only when document has been loaded
+document.addEventListener("DOMContentLoaded", setMainButtonsHref); 
+
+
+
 // [ Solid background transition ]
 // Window will track if user is scrolling, if so will call setNavBackground
 let scrolled = false;
