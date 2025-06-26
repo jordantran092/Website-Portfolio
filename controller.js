@@ -119,20 +119,25 @@ let navItemElem;
 
 // let string = "/Website-Portfolio/index.html";
 
+// Get index of second occurence of '/' starting from index 1 to skip the initial '/'.  Get the substring of beginning of pathname to that index inclusive, which should be the main directory of source code. 
 let currentDir = window.location.pathname.substring(0,  window.location.pathname.indexOf("/",1)+1);
 
 
+let urlIndex = "index.html";
+let urlMyWork = "my_work.html";
+let urlAbout = "about.html";
+let urlContact = "contact.html";
 
-if( window.location.pathname == currentDir+"index.html" || window.location.pathname == currentDir) {
+if(window.location.pathname == currentDir+urlIndex || window.location.pathname == currentDir || window.location.pathname == "/"+urlIndex) {
     navItemElem = document.getElementById("index");
 }
-else if(window.location.pathname == 'my_work.html') {
+else if(window.location.pathname == currentDir+urlMyWork || window.location.pathname == "/"+urlMyWork) {
     navItemElem = document.getElementById("myWork");
 }
-else if(window.location.pathname == 'about.html') {
+else if(window.location.pathname == currentDir+urlAbout || window.location.pathname == "/"+urlAbout) {
     navItemElem = document.getElementById("about");
 }
-else if(window.location.pathname == 'contact.html') {
+else if(window.location.pathname == currentDir+urlContact || window.location.pathname == "/"+urlContact) {
     navItemElem = document.getElementById("contact");
 }
 
