@@ -117,9 +117,13 @@ let navItemElem;
 // "/Website-Portfolio/index.html" 
 // /Website-Portfolio/
 
-let currentDir = window.location.pathname.substring(0, window.location.pathname.indexOf("/",1)+1);
+// let string = "/Website-Portfolio/index.html";
 
-if(window.location.pathname == currentDir+"index.html" || window.location.pathname == "") {
+let currentDir = window.location.pathname.substring(0,  window.location.pathname.indexOf("/",1)+1);
+
+
+
+if( window.location.pathname == currentDir+"index.html" || window.location.pathname == currentDir) {
     navItemElem = document.getElementById("index");
 }
 else if(window.location.pathname == 'my_work.html') {
