@@ -112,7 +112,14 @@ function setNavBackgroundOnClick(button) {
 
 // Set border around nav item correspondingly, each time a page is loaded
 let navItemElem;
-if(window.location.pathname == '/./index.html' || window.location.pathname == "/.") {
+
+
+// "/Website-Portfolio/index.html" 
+// /Website-Portfolio/
+
+let currentDir = window.location.pathname.substring(0, window.location.pathname.indexOf("/",1)+1);
+
+if(window.location.pathname == currentDir+"index.html" || window.location.pathname == "") {
     navItemElem = document.getElementById("index");
 }
 else if(window.location.pathname == 'my_work.html') {
