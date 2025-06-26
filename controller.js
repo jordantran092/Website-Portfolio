@@ -8,7 +8,9 @@ const navBarContentElement = document.getElementById("navbarSupportedContent");
 const navBarTogglerButton = document.querySelector(".navbar-toggler");
 const navHeight = navBarElement.offsetHeight; // placed at beginning because only want initial height of navbar while collapse element is hidden
 
-
+// Get index of second occurence of '/' starting from index 1 to skip the initial '/'.  Get the substring of beginning of pathname to that index inclusive, which should be the main directory of source code. (e.g. /Website-Portfolio/)
+let currentDir = window.location.pathname.substring(0,  window.location.pathname.indexOf("/",1)+1);
+if(currentDir == "") currentDir = "/"; // In case of local host
 
 
 
@@ -39,7 +41,7 @@ function setNavBackground() {
             navBarElement.classList.remove("scrolled");
 
             // Changes navbar toggler back to white, only for home page, for easier visibility
-            if (window.location.pathname === '/' || window.location.pathname === 'index.html') {
+            if(window.location.pathname == currentDir+urlIndex || window.location.pathname == currentDir) {
                 navBarTogglerElement.style.backgroundImage = `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`;
             }
 
@@ -80,7 +82,7 @@ function setNavBackgroundOnClick(button) {
                 navBarElement.classList.remove("scrolled");
 
                 // Changes navbar toggler back to white, only for home page, for easier visibility
-                if (window.location.pathname === '/' || window.location.pathname === 'index.html') {
+                if(window.location.pathname == currentDir+urlIndex || window.location.pathname == currentDir) {
                     navBarTogglerElement.style.backgroundImage = `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`;
                 }
 
@@ -90,7 +92,7 @@ function setNavBackgroundOnClick(button) {
                 navBarElement.classList.add("scrolled");
 
                 // Changes navbar toggler to black, only for home page, for easier visibility
-                if (window.location.pathname === '/' || window.location.pathname === 'index.html') {
+                if(window.location.pathname == currentDir+urlIndex || window.location.pathname == currentDir) {
                     navBarTogglerElement.style.backgroundImage = `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`;
                 }
             }
@@ -110,19 +112,10 @@ function setNavBackgroundOnClick(button) {
 
 
 
+
+
 // Set border around nav item correspondingly, each time a page is loaded
 let navItemElem;
-
-
-// "/Website-Portfolio/index.html" 
-// /Website-Portfolio/
-
-// let string = "/Website-Portfolio/index.html";
-
-// Get index of second occurence of '/' starting from index 1 to skip the initial '/'.  Get the substring of beginning of pathname to that index inclusive, which should be the main directory of source code. 
-let currentDir = window.location.pathname.substring(0,  window.location.pathname.indexOf("/",1)+1);
-if(currentDir == "") currentDir = "/";
-
 
 let urlIndex = "index.html";
 let urlMyWork = "my_work.html";
@@ -145,6 +138,8 @@ else if(window.location.pathname == currentDir+urlContact) {
 if(navItemElem != null) {
     navItemElem.classList.add("border", "border-dark");
 }
+
+
 
 
 
