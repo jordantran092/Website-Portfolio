@@ -39,7 +39,7 @@ class customNavBar extends HTMLElement {
         this.innerHTML = 
         `
         <!-- 
-            Fixed-top to allow navbar to be on top of background image and fixed to the top of screen even when scroll down, so that other elements can stay in the normal flow 
+            Fixed-top to allow navbar to be on top of background image because it has position: absolute so that other elements can stay in the normal flow , and fixed to the top of screen even when scroll down 
         -->
 
         <nav class="navbar navbar-expand-xl fw-bold fs-6 fixed-top">
