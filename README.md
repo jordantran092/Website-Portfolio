@@ -1,0 +1,1 @@
+This project is a way for me to have my own personal website where people can inquire more about me. This allows me to store my projects in a more visual and accessible way and have other functionalities like a contact form. It’s also a way for me to learn more about web development. 
