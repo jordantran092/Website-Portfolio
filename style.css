@@ -7,11 +7,11 @@
 
 
 
-.nav-link:hover  {
-    /* hover color change on nav item */
+.nav-link:hover, .icon:hover, #contactEmail:hover {
+    /* hover color change */
     color: grey !important; /* important overrides the bootstrap properties, since text-white is applied to nav items for its classes */
+    transition: all 0.2s;
 }
-
 
 
 /* Navbar toggler */
@@ -21,8 +21,6 @@
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 
 }
-
-
 
 
 .navbar-toggler {
@@ -47,10 +45,16 @@
 }
 
 
-/* All <a> elements that are descendants of elements with .projectButton have this to remove the blue underline from href link of button */
-.projectButton a {
+/* All <a> elements that are descendants of the element have this to remove the blue underline from href link */
+.projectButton a, #iconContainer a {
     text-decoration: none;
 }
+
+.icon {
+    font-size: 1.5rem; 
+    color: white;
+}
+
 
 
 /* For large screens or more, the width of each nav item will be 8em */

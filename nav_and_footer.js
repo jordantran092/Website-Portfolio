@@ -15,16 +15,32 @@ class customFooter extends HTMLElement {
         <div class="container-fluid pt-5 bg-dark text-center text-white flex-grow-1">
             <div class="row">
                 <div class="col">
-                    <!-- Medium screens or larger have size 5, screens smaller than md will default to mt-6 class -->
-                    <h1 class="mt-6 mt-md-5">Get In Touch</h1>
+                    
+                    <h1 class="mt-5">Get In Touch</h1>
                     
                     <p class="mt-4 px-1">If you have any questions or concerns, feel free to contact me</p>
                     
                     <button type="button" class="btn btn-outline-light mt-5" onclick="location.href='contact.html';">CONTACT</button>
 
+                    <!-- Medium or greater will have size 6, else smaller screens will have mt-copyright -->
+                    <div class="mt-md-6 mt-copyright" id="iconContainer">
+                        
+                        <a href="mailto:jordantran092@gmail.com" class="mx-2">
+                            <i class="bi bi-envelope icon"></i>
+                        </a>
+                        
+                        <a href="https://github.com/jordantran092" class="mx-2">
+                            <i class="bi bi-github icon"></i>
+                        </a>
 
-                    <!-- Medium or greater will have size 5, else smaller screens will have mt-copyright -->
-                    <p class="mt-copyright mt-md-5">© 2025 Jordan Tran</p>
+                        <a href="https://linkedin.com/in/jordan-tran-5444b62a3" class="mx-2">
+                            <i class="bi bi-linkedin icon"></i>
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    <p class="mt-4">© 2025 Jordan Tran</p>
                     
                 </div>
             </div>
