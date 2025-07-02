@@ -68,24 +68,31 @@ class customNavBar extends HTMLElement {
                         mx-auto centers the navbar
                     -->
                     <ul class="navbar-nav mx-auto my-4">
-                        <!-- Giving it class nav-item gives this item the properties to become a navbar item -->
+                        <!-- Giving it class nav-item gives this item the properties to become a navbar item
+                        
+                        ms-xl-4 so that nav items have proper spacing in between on >= xl, but then none on < xl so that nav items can be centered properly on mobile nav bar -->
 
                 
-                        <li class="nav-item ms-4">
+                        <li class="nav-item ms-xl-4">
                             <!-- give px-4 so that border isn't too close to content -->
-                            <a class="nav-link text-black text-center px-4" href="index.html" id="index">HOME</a>
+                            <a class="nav-link text-black text-center px-4 mx-auto" href="index.html" id="index">HOME</a>
                         </li>
-                        <li class="nav-item ms-4">
-                            <a class="nav-link text-black text-center px-4" href="my_work.html" id="myWork">MY WORK</a>
+                        <li class="nav-item ms-xl-4">
+                            <!-- give px 4 on xl so that border isn't too close to content
+
+                            mx-auto to center the item
+                            
+                            HOWEVER, px-0 on smaller screens so that 'my work' doesn't wrap to a new line -->
+                            <a class="nav-link text-black text-center px-0 px-xl-4 mx-auto" href="my_work.html" id="myWork">MY WORK</a>
                         </li>
-                        <li class="nav-item ms-4">
-                            <a class="nav-link text-black text-center px-4" href="about.html" id="about">ABOUT</a>
+                        <li class="nav-item ms-xl-4">
+                            <a class="nav-link text-black text-center px-4 mx-auto" href="about.html" id="about">ABOUT</a>
                         </li>
-                        <li class="nav-item ms-4">
-                            <a class="nav-link text-black text-center px-4" href="contact.html" id="contact">CONTACT</a>
+                        <li class="nav-item ms-xl-4">
+                            <a class="nav-link text-black text-center px-4 mx-auto" href="contact.html" id="contact">CONTACT</a>
                         </li>
-                        <li class="nav-item ms-4">
-                            <a class="nav-link text-black text-center" href="emmet.pdf" target="_blank">RESUME</a>
+                        <li class="nav-item ms-xl-4">
+                            <a class="nav-link text-black text-center mx-auto" href="emmet.pdf" target="_blank">RESUME</a>
                         </li>
 
                     </ul>
