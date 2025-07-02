@@ -29,11 +29,11 @@ class customFooter extends HTMLElement {
                             <i class="bi bi-envelope icon"></i>
                         </a>
                         
-                        <a href="https://github.com/jordantran092" class="mx-2">
+                        <a href="https://github.com/jordantran092" target="_blank" class="mx-2">
                             <i class="bi bi-github icon"></i>
                         </a>
 
-                        <a href="https://linkedin.com/in/jordan-tran-5444b62a3" class="mx-2">
+                        <a href="https://linkedin.com/in/jordan-tran-5444b62a3" target="_blank" class="mx-2">
                             <i class="bi bi-linkedin icon"></i>
                         </a>
                         
