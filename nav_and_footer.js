@@ -108,7 +108,7 @@ class customNavBar extends HTMLElement {
                             <a class="nav-link text-black text-center px-4 mx-auto" href="contact.html" id="contact">CONTACT</a>
                         </li>
                         <li class="nav-item ms-xl-4">
-                            <a class="nav-link text-black text-center mx-auto" href="emmet.pdf" target="_blank">RESUME</a>
+                            <a class="nav-link text-black text-center mx-auto" href="My Resume.pdf" target="_blank">RESUME</a>
                         </li>
 
                     </ul>
