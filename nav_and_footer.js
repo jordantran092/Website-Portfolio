@@ -33,7 +33,7 @@ class customFooter extends HTMLElement {
                             <i class="bi bi-github icon"></i>
                         </a>
 
-                        <a href="https://linkedin.com/in/jordan-tran-5444b62a3" target="_blank" class="mx-2">
+                        <a href="https://www.linkedin.com/in/jordantran46/" target="_blank" class="mx-2">
                             <i class="bi bi-linkedin icon"></i>
                         </a>
                         
