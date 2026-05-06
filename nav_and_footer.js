@@ -40,7 +40,7 @@ class customFooter extends HTMLElement {
                         
                     </div>
                     
-                    <p class="mt-4">© 2025 Jordan Tran</p>
+                    <p class="mt-4">© 2026 Jordan Tran</p>
                     
                 </div>
             </div>
