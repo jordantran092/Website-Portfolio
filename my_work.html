@@ -5,61 +5,64 @@
  
 -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Work</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
 
-
-</head>
-
-<!-- Make body the flexbox container so that the footer can fill space all the way to bottom. Direction is set to column and vh is set to 100 so to that flexbox container stretches to bottom of viewport allowing footer to TRULY fill all the way to bottom -->
-<body class="d-flex flex-column vh-100">
-
+  <!-- Make body the flexbox container so that the footer can fill space all the way to bottom. Direction is set to column and vh is set to 100 so to that flexbox container stretches to bottom of viewport allowing footer to TRULY fill all the way to bottom -->
+  <body class="d-flex flex-column vh-100">
     <custom-navbar></custom-navbar>
 
     <main class="mt-6 mt-lg-7">
-        <!-- mb-5 for space between footer and this as the last element -->
-        <div class="container mb-5">
+      <!-- mb-5 for space between footer and this as the last element -->
+      <div class="container mb-5">
+        <h1 class="display-5">My Work</h1>
 
-            <h1 class="display-5">My Work</h1>
+        <hr class="mt-5" />
 
-            <hr class="mt-5"/>
-
-            <!-- All <a> elements that are descendants of elements with .projectButton have this to remove the blue underline from href link of button 
+        <!-- All <a> elements that are descendants of elements with .projectButton have this to remove the blue underline from href link of button 
                 
             justify-content-center to allow last card to be centered-->
-            <div class="row mt-6 mt-lg-7 justify-content-center projectButton">
-            
-                <!-- 
+        <div class="row mt-6 mt-lg-7 justify-content-center projectButton">
+          <!-- 
                     For larger screens or greater, columns will take up 4 units. Else, full width at 12 units to allow them to stack and become larger on mobile.    
 
                     mb so cards in smaller screens have space between, except for last one as no need
                 -->
-                <div class="col-12 col-lg-4 mb-6"> 
-                    
-                    <!-- Use ratio to make the video fit properly into the card body -->
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/9wYqZXoDxn8" title="YouTube video" allowfullscreen></iframe>
-                    </div>
-                    
-                    
-                    <p class="fw-bold text-center mt-4">Bank App</p>
+          <div class="col-12 col-lg-4 mb-6">
+            <!-- Use ratio to make the video fit properly into the card body -->
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/9wYqZXoDxn8"
+                title="YouTube video"
+                allowfullscreen
+              ></iframe>
+            </div>
 
-                    <!-- Wrap button with <a> to make it open a new tab using target attribute, via left mouse button or middle mouse 
+            <p class="fw-bold text-center mt-4">Bank App</p>
+
+            <!-- Wrap button with <a> to make it open a new tab using target attribute, via left mouse button or middle mouse 
                         
                     Use grid display to create a full width block button, with size 9 to make it appropriate width, and center it -->
-                    <a class="d-grid mx-auto col-9 mt-4" href="https://github.com/jordantran092/Bank-App-Spring-Boot-REST-API" target="_blank">      
-                        <button type="button" class="btn btn-dark">Source Code</button>      
-                    </a>
-					
-					<!-- 
+            <a
+              class="d-grid mx-auto col-9 mt-4"
+              href="https://github.com/jordantran092/Bank-App-Spring-Boot-REST-API"
+              target="_blank"
+            >
+              <button type="button" class="btn btn-dark">Source Code</button>
+            </a>
+
+            <!-- 
 					
 					
 					
@@ -68,196 +71,160 @@
 					
 					
 					-->
+          </div>
 
+          <div class="col-12 col-lg-4 mb-6">
+            <!-- Use ratio to make the video fit properly into the card body -->
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/twy31g4modQ"
+                title="YouTube video"
+                allowfullscreen
+              ></iframe>
+            </div>
 
-                    
+            <p class="fw-bold text-center mt-4">Driving Simulation</p>
 
-                </div>
-                
-                <div class="col-12 col-lg-4 mb-6"> 
-                    
-                    <!-- Use ratio to make the video fit properly into the card body -->
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/twy31g4modQ" title="YouTube video" allowfullscreen></iframe>
-                    </div>
-                    
-                    
-                
-                    <p class="fw-bold text-center mt-4">Driving Simulation</p>
-
-
-                    <!-- Wrap button with <a> to make it open a new tab using target attribute, via left mouse button or middle mouse 
+            <!-- Wrap button with <a> to make it open a new tab using target attribute, via left mouse button or middle mouse 
                         
                     Use grid display to create a full width block button, with size 9 to make it appropriate width, and center it -->
-                    <a class="d-grid mx-auto col-9 mt-4" href="https://github.com/jordantran092/Tokyo-Drift" target="_blank">      
-                        <button type="button" class="btn btn-dark">Source Code</button>      
-                    </a>
-					
-					<!--
+            <a
+              class="d-grid mx-auto col-9 mt-4"
+              href="https://github.com/jordantran092/Driving-Simulation"
+              target="_blank"
+            >
+              <button type="button" class="btn btn-dark">Source Code</button>
+            </a>
+
+            <!--
 					
 					
 					https://gitfront.io/r/jordan-tran/aNcKx6oWek4H/Tokyo-Drift/
 					
 					
 					-->
-                    
-                </div>
+          </div>
 
-                <div class="col-12 col-lg-4 mb-6"> 
-                    
-                    <!-- Use ratio to make the video fit properly into the card body -->
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/uYudS5ek1as" title="YouTube video" allowfullscreen></iframe>
-                    </div>
-                    
-                    
-                    <p class="fw-bold text-center mt-4">Tic Tac Toe</p>
-                    
-
-
-
-                    <!-- Wrap button with <a> to make it open a new tab using target attribute, via left mouse button or middle mouse 
-                        
-                    Use grid display to create a full width block button, with size 9 to make it appropriate width, and center it -->
-                    <a class="d-grid mx-auto col-9 mt-4" href="https://github.com/jordantran092/TicTacToe" target="_blank">      
-                        <button type="button" class="btn btn-dark">Source Code</button>      
-                    </a>
-                    
-                </div>
-
-
-                <div class="col-12 col-lg-4"> 
-                    <!-- Use ratio to make the video fit properly into the card body -->
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/qiucnrAWLbM" title="YouTube video" allowfullscreen></iframe>
-                    </div>
-                    
-                    
-                
-                    <p class="fw-bold text-center mt-4">Dynamic Memory Allocation, Pointers, & File I/O</p>
-
-
-                    <!-- Wrap button with <a> to make it open a new tab using target attribute, via left mouse button or middle mouse 
-                        
-                    Use grid display to create a full width block button, with size 9 to make it appropriate width, and center it -->
-                    <a class="d-grid mx-auto col-9 mt-4" href="https://github.com/jordantran092/Dynamic-Memory-Allocation-Pointers-File-IO" target="_blank">      
-                        <button type="button" class="btn btn-dark">Source Code</button>      
-                    </a>
-                    
-
-                </div>
+          <div class="col-12 col-lg-4 mb-6">
+            <!-- Use ratio to make the video fit properly into the card body -->
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/uYudS5ek1as"
+                title="YouTube video"
+                allowfullscreen
+              ></iframe>
             </div>
-            
 
-            <h1 class="display-6 text-center mt-6">Technologies I've Worked With</h1>
+            <p class="fw-bold text-center mt-4">Tic Tac Toe</p>
 
-            
-            
-            <div class="row mt-6 justify-content-center"> 
-                <div class="col-lg-1 col-md-2 col-3">
-                    <img class="img-fluid" src="media/logos/java.webp">
+            <!-- Wrap button with <a> to make it open a new tab using target attribute, via left mouse button or middle mouse 
+                        
+                    Use grid display to create a full width block button, with size 9 to make it appropriate width, and center it -->
+            <a
+              class="d-grid mx-auto col-9 mt-4"
+              href="https://github.com/jordantran092/TicTacToe"
+              target="_blank"
+            >
+              <button type="button" class="btn btn-dark">Source Code</button>
+            </a>
+          </div>
 
-                </div>
-                <div class="col-lg-1 col-md-2 col-3">
-                    <img class="img-fluid" src="media/logos/androidstudio.png">
+          <div class="col-12 col-lg-4">
+            <!-- Use ratio to make the video fit properly into the card body -->
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/qiucnrAWLbM"
+                title="YouTube video"
+                allowfullscreen
+              ></iframe>
+            </div>
 
-                </div>
-                <div class="col-lg-1 col-md-2 col-3">
-                    <img class="img-fluid" src="media/logos/python.png">
+            <p class="fw-bold text-center mt-4">
+              Dynamic Memory Allocation, Pointers, & File I/O
+            </p>
 
-                </div>
-                <div class="col-lg-1 col-md-2 col-3">
-                    <img class="img-fluid" src="media/logos/C.png">
+            <!-- Wrap button with <a> to make it open a new tab using target attribute, via left mouse button or middle mouse 
+                        
+                    Use grid display to create a full width block button, with size 9 to make it appropriate width, and center it -->
+            <a
+              class="d-grid mx-auto col-9 mt-4"
+              href="https://github.com/jordantran092/Dynamic-Memory-Allocation-Pointers-File-IO"
+              target="_blank"
+            >
+              <button type="button" class="btn btn-dark">Source Code</button>
+            </a>
+          </div>
+        </div>
 
-                </div>
+        <h1 class="display-6 text-center mt-6">
+          Technologies I've Worked With
+        </h1>
 
-                <!-- Create a 100% width element that becomes a block element to force a wrap/new line for the columns at this point, except for screen sizes large and greater
+        <div class="row mt-6 justify-content-center">
+          <div class="col-lg-1 col-md-2 col-3">
+            <img class="img-fluid" src="media/logos/java.webp" />
+          </div>
+          <div class="col-lg-1 col-md-2 col-3">
+            <img class="img-fluid" src="media/logos/androidstudio.png" />
+          </div>
+          <div class="col-lg-1 col-md-2 col-3">
+            <img class="img-fluid" src="media/logos/python.png" />
+          </div>
+          <div class="col-lg-1 col-md-2 col-3">
+            <img class="img-fluid" src="media/logos/C.png" />
+          </div>
+
+          <!-- Create a 100% width element that becomes a block element to force a wrap/new line for the columns at this point, except for screen sizes large and greater
                  
                 This is so that I can make the first 8 items stay on one row on large screens and greater, and then wrap on smaller screens -->
-                <div class="w-100 d-lg-none d-block"></div>
+          <div class="w-100 d-lg-none d-block"></div>
 
-
-                <div class="col-lg-1 col-md-2 col-3">
-                    <img class="img-fluid" src="media/logos/linux.png">
-
-                </div>
-                <div class="col-lg-1 col-md-2 col-3">
-                    <img class="img-fluid" src="media/logos/html.png">
-
-                </div>
-                <div class="col-lg-1 col-md-2 col-3">
-                    <img class="img-fluid" src="media/logos/css.png">
-
-                </div>
-                <div class="col-lg-1 col-md-2 col-3">
-                    <img class="img-fluid" src="media/logos/js.png">
-                </div>
-            </div>
-
-            <!-- mt-lg-4 to give space between rows -->
-
-            <div class="row mt-lg-4 justify-content-center">
-                <div class="col-lg-3 col-md-6 col-8">
-                    <img class="img-fluid" src="media/logos/pygame.png">
-                </div>
-
-                <!-- Create a 100% width element that becomes a block element to force a wrap/new line for the columns at this point, except for screen sizes large and greater -->
-                <div class="w-100 d-lg-none d-block"></div>
-
-                <div class="col-lg-3 col-md-6 col-8 mt-3">
-                    <img class="img-fluid" src="media/logos/riscv.png">
-                </div>
-                    
-            </div>
-
-
-
-            <div class="row mt-lg-4 mt-3 justify-content-center ">
-                <div class="col-lg-2 col-md-4 col-6">
-                    <img class="img-fluid" src="media/logos/bash.png">
-                </div>
-                <!-- pt-2 to be in line with bash pic on mobile -->
-                <div class="col-lg-1 col-md-2 col-3 pt-2">
-                    <img class="img-fluid" src="media/logos/bootstrap.png">
-                </div>
-                    
-            </div>
-
-
-
-            
-
-
-
-
+          <div class="col-lg-1 col-md-2 col-3">
+            <img class="img-fluid" src="media/logos/linux.png" />
+          </div>
+          <div class="col-lg-1 col-md-2 col-3">
+            <img class="img-fluid" src="media/logos/html.png" />
+          </div>
+          <div class="col-lg-1 col-md-2 col-3">
+            <img class="img-fluid" src="media/logos/css.png" />
+          </div>
+          <div class="col-lg-1 col-md-2 col-3">
+            <img class="img-fluid" src="media/logos/js.png" />
+          </div>
         </div>
+
+        <!-- mt-lg-4 to give space between rows -->
+
+        <div class="row mt-lg-4 justify-content-center">
+          <div class="col-lg-3 col-md-6 col-8">
+            <img class="img-fluid" src="media/logos/pygame.png" />
+          </div>
+
+          <!-- Create a 100% width element that becomes a block element to force a wrap/new line for the columns at this point, except for screen sizes large and greater -->
+          <div class="w-100 d-lg-none d-block"></div>
+
+          <div class="col-lg-3 col-md-6 col-8 mt-3">
+            <img class="img-fluid" src="media/logos/riscv.png" />
+          </div>
+        </div>
+
+        <div class="row mt-lg-4 mt-3 justify-content-center">
+          <div class="col-lg-2 col-md-4 col-6">
+            <img class="img-fluid" src="media/logos/bash.png" />
+          </div>
+          <!-- pt-2 to be in line with bash pic on mobile -->
+          <div class="col-lg-1 col-md-2 col-3 pt-2">
+            <img class="img-fluid" src="media/logos/bootstrap.png" />
+          </div>
+        </div>
+      </div>
     </main>
 
-
-
     <custom-footer></custom-footer>
-
-
-    
-
-    
-
-
-
-
-
-
-
-
-
-	
-
-
 
     <!-- Put scripts at bottom to maximize loading speed, and make sure nav_and_footer loaded before main.js interacts with it -->
     <script src="js/bootstrap.bundle.js"></script>
     <script src="nav_and_footer.js"></script>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
